@@ -162,7 +162,7 @@ let foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter((element) => element.tags )
+const filteredFood = foodArr.filter(element => element.tags === "regular")
 console.log(filteredFood)
 
 
@@ -206,8 +206,15 @@ console.log(filteredFood)
 */
 
 //CODE HERE
-     let filterByProperty = (property, number, type) => { foodArr.filter((element) => element.property === number)
-     }
+function filterByProperty (property, number, type) {
+    if (type === 'above') {
+         return foodArr.filter(element => element[property] > number)
+    } else if (type === 'below') {
+        return foodArr.filter(element => element[property] < number)
+
+    }
+}
+console.log(filterByProperty('popularity', 4, 'below'))  
 
 
 /*
@@ -218,4 +225,4 @@ console.log(filteredFood)
 */
 
 //CODE HERE
-filterByProperty(rating, 5 ,"Above")
+console.log(filterByProperty)
