@@ -55,13 +55,13 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 //CODE HERE
 function canWeDeliver (zipCode) {
     if (deliveryAreaZipCodes.includes(zipCode)) {
-        console.log(`You're in our delivery zone`)
+        return (`You're in our delivery zone`)
     } else {
-        console.log(`Sorry, we can't deliver to that address`)
+        return (`Sorry, we can't deliver to that address`)
     }
     
 }
-canWeDeliver(86205)
+canWeDeliver(85205)
 
 
 
@@ -83,17 +83,16 @@ canWeDeliver(86205)
 */
 
 // CODE HERE
-let canWeDeliverTwo = (zipCode) => deliveryAreaZipCodes.forEach((el) => { 
-if (el === zipCode) {
-    console.log(`You're in our delivery zone`)
-} else {
- console.log(`Sorry, we can't deliver to that address`)
-}})
-
-canWeDeliverTwo(85205)
-
+let canWeDeliverTwo = (zipCode) => {
+    for (i=0; i < deliveryAreaZipCodes.length; i++){
+if (deliveryAreaZipCodes[i] === zipCode) {
+    return (`You're in our delivery zone`)
+} 
+}
+return (`Sorry, we can't deliver to that address`)}
 
 
+console.log(canWeDeliverTwo(85205))
 
 
 
@@ -134,7 +133,7 @@ const deals = [
 //CODE HERE
 let {title} = deals[0]
 title = title.replace('15', '10')
-console.log(title)
+// console.log(title)
 
 
 /*
@@ -154,4 +153,4 @@ console.log(title)
 let {desc} = deals[1]
 desc = desc.replace('March', 'April')
 desc = desc.trim()
-console.log(desc)
+// console.log(desc)

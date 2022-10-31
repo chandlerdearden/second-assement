@@ -161,10 +161,8 @@ let foodArr = [
 */
 
 //CODE HERE
-
-const filteredFood = foodArr.filter(element => element.tags === "regular")
+const filteredFood = foodArr.filter(element => element.tags.includes('regular') )
 console.log(filteredFood)
-
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -214,9 +212,7 @@ function filterByProperty (property, number, type) {
 
     }
 }
-console.log(filterByProperty('popularity', 4, 'below'))  
-
-
+  
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -225,4 +221,4 @@ console.log(filterByProperty('popularity', 4, 'below'))
 */
 
 //CODE HERE
-console.log(filterByProperty)
+console.log(filterByProperty('popularity', 4, 'below'))  

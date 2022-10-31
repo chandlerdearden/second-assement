@@ -36,7 +36,7 @@ const cart = [
 //CODE HERE
 
 const summedPrice = cart.reduce((acc,curr) => acc + curr.price, 0)
-// console.log('Total Price =',summedPrice)
+console.log('Total Price =',summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -82,7 +82,7 @@ console.log(calcFinalPrice(100, 20, .06))
 
 /*
     TEXT ANSWER HERE
-    
+
     customer = {
     drink : because everycustomer will order a drink even if they want water
     entree: the entree that the customer will order
